@@ -15,7 +15,7 @@ try:
 except Exception as err:
     print("Problem encountered: %s" % err)  # Print the Exception Error encountered.
 
-testSoup = testSoup.findAll("table", {"class" : str(input("class name"))})  # Finds table values.
+testSoup = testSoup.findAll("table", {"class" : str(input("class name"))})  # Finds table values stored in tables with the inputted class name.
 print(testSoup)  # Prints all collected text.
 
 testSoup = testSoup[1]  # Gets the first value
@@ -45,6 +45,3 @@ with open("Filename.csv", "w", newline="") as f:  # Creates CSV File.
     writer = csv.DictWriter(f, fieldnames = fieldnames)  # Assigns file and fieldnames.
     for data in data_rows:
         writer.writerow({"Column 1" : str(data[0]), "Column 2" : str(data[1])})  # Adds rows. Values assigned to field names.
-    
-        
-    
