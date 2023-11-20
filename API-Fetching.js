@@ -4,7 +4,6 @@ fun = async (url) => {  // Creates an async object function. Allowing the use of
     let data = obj.message  // "message" is the value contained within Json.
     return data
 }
-
 let api_Url = ""  // API URL.
 fun(api_Url).then(
     function(value){
